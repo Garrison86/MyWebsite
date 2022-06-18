@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(10, 40, 64);
+    font-family: 'Courier New', Courier, monospace;
+    background-attachment: fixed;
+    font-size: 20px;
+    color: rgb(168, 225, 53);
+    line-height: 1.6em;
+    /*em is just a unit of mesurment*/
+    width: 70%;
+    margin: auto;
+    line-height: 1.6em;
+}
+#header{
+    color: coral;
+    text-align: left;
+    font-size: 24px;
+}
