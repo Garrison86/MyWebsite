@@ -1,0 +1,36 @@
+body {
+	text-align: center;
+}
+
+.container-md{
+	margin: 5px auto;
+}
+
+header {
+	background-image: url("R.jpg");
+	background-size: 100% 100%;
+	font-family: 'Fascinate';
+	padding: 10px;
+	margin-bottom:5px;
+}
+
+.content {
+	background-color: rgb(147, 234, 118);
+	text-align: center;
+	height: 500px;
+	margin: 5px auto;
+	padding: 25px;
+}
+
+.menu {
+	padding: 5px;
+	text-align: center;
+}
+
+.footer {
+	background-color: rgb(59, 134, 156);
+	height: 80px;
+	margin: 5px auto;
+	padding: 10px;
+	text-align: center;
+}

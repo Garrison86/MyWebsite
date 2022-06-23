@@ -31,7 +31,6 @@
 
 
 
-
     <content class="row" style="font-family: 'Kdam Thmor Pro', sans-serif;">
         <div class="content">
             <?php
@@ -42,13 +41,10 @@
 
 
 
-    <Footer class="row">
-        <section class="footer">
-            <?php
-            include 'Footer.php';
-            ?>
-        </section>
-    </Footer>
+
+        <?php
+        include 'Footer.php';
+        ?>
 </div>
 </body>
 
