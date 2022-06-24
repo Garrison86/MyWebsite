@@ -2,6 +2,7 @@
 var myJsOutput = document.getElementById("myJsOutput");
 
 document.getElementById("myButton").onclick = function(){
+    
     myJsOutput.innerHTML = "<br>";
     tri = document.getElementById("myText").value;
     
@@ -12,23 +13,6 @@ document.getElementById("myButton").onclick = function(){
     }
   }
 }
-
-
-
-function triangle(){
-
-    myJsOutput.innerHTML = "<br>";
-    tri = document.getElementById("myText").value;
-    
-    for (var i = 0; i <= tri; i++) {
-    myJsOutput.innerHTML += " \n" + "<br>";
-    for (var j = 0; j < i; j++) {
-    myJsOutput.innerHTML += "*\n";
-    }
-  }
-}
-
-
 
 
 document.getElementById("myFibButton").onclick = function(){

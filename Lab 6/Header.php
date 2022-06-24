@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+    <div class="container">
     <header class="row" style="font-family: 'Fascinate', cursive;">
 
             <?php
@@ -25,7 +25,7 @@
                 <h3>Web Development</h3>";
             ?>
 
-            <div class="menu col offset-6">
+            <div class="menu col offset-5">
                 <div>
                     <?php
                     include "Menu.php";
@@ -33,3 +33,5 @@
                 </div>
             </div>
     </header>
+    <content class="row" style="font-family: Kdam Thmor Pro, sans-serif;">
+    <div class="content">
