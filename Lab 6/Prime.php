@@ -16,29 +16,36 @@ echo '  Range 1:<input type="number" id="rangeLowText" style="margin:6px 0px;">
     var prime = document.getElementById("prime");
     document.getElementById("rangeLowButton").onclick = function() {
         prime.innerHTML = "<br>";
-       rangeL = document.getElementById("rangeLowText").value;
-       rangeH = document.getElementById("rangehighText").value;
-        var primeString = "is a prime number";
+        rangeL = document.getElementById("rangeLowText").value;
+        rangeH = document.getElementById("rangehighText").value;
+        
+        var index = 0;
         var amount = rangeH - rangeL;
         const rangeArray = [amount];
-        let length = rangeArray.length;
 
-        prime.innerHTML += length+"<br>";
-        prime.innerHTML += amount+"<br>";
-        prime.innerHTML += primeString+"<br>";
 
-        
-        for(var i=0; i<=amount; i++){
-            rangeArray[i]= rangeL++;
-            prime.innerHTML += rangeArray[i]+"<br>";
+        for (var numToChk = rangeL; numToChk <= rangeH; numToChk++) {
+            var primevalue = true;
+            for (var factor = 2; factor <= numToChk/2; factor++) {
+                if (numToChk % factor == 0) {
+                    primevalue = false;
+                    break;
+                }
+            }
+            if (primevalue) {
+                rangeArray[index] = numToChk;
+                index++;
+            }
         }
-     
 
+        for (var i = 0; i < amount; i++) {
+            if (rangeArray[i] == undefined) {} else {
+                prime.innerHTML += rangeArray[i] + " is a prime number<br>";
+            }
+        }
     }
-
-     
-    
 </script>
+
 <?php
 echo '</div>';
 
