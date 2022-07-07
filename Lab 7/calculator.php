@@ -23,6 +23,9 @@ if (isset($_REQUEST['calculate'])) {
   if ($operator == "/") {
     $res = $n1 / $n2;
   }
+  if ($operator == "exp") {
+    $res = pow($n1,$n2);
+  }
 }
 
 ?>
@@ -43,6 +46,7 @@ if (isset($_REQUEST['calculate'])) {
           <option>-</option>
           <option>*</option>
           <option>/</option>
+          <option>exp</option>
         </select>
       </td>
     </tr>
