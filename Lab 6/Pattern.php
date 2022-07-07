@@ -26,7 +26,7 @@ echo '<div class="content">';
           }
           else {
             string += " ";
-          }
+          } 
         }
         }
         string += "<br>";

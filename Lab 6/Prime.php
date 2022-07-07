@@ -18,7 +18,7 @@ echo '  Range 1:<input type="number" id="rangeLowText" style="margin:6px 0px;">
         prime.innerHTML = "<br>";
         rangeL = document.getElementById("rangeLowText").value;
         rangeH = document.getElementById("rangehighText").value;
-        
+
         var index = 0;
         var amount = rangeH - rangeL;
         const rangeArray = [amount];
@@ -26,7 +26,8 @@ echo '  Range 1:<input type="number" id="rangeLowText" style="margin:6px 0px;">
 
         for (var numToChk = rangeL; numToChk <= rangeH; numToChk++) {
             var primevalue = true;
-            for (var factor = 2; factor <= numToChk/2; factor++) {
+            
+            for (var factor = 2; factor <= numToChk / 2; factor++) {
                 if (numToChk % factor == 0) {
                     primevalue = false;
                     break;
