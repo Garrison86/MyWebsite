@@ -1,13 +1,26 @@
 body {
 	text-align: center;
+	
+}
+.container{
+	margin: 10px auto;
+}
+.right-side{
+	background-color: rgb(161, 184, 229);
+	height: fit-content;
+	height: 500px;
+	margin: 5px;
+}
+.left-side{
+	background-color: rgb(161, 184, 229);
+	height: fit-content;
+	height: 500px;
+	margin: 5px;
 }
 
-.container-md{
-	margin: 5px auto;
-}
 
 header {
-	background-image: url("image1.jpg");
+	background-image: url("image1.png");
 	background-size:70% ;
 	font-family: 'Fascinate';
 	padding: 10px;
@@ -15,9 +28,7 @@ header {
 }
 
 .content {
-
 	background-color: lightgreen;
-	text-align: center;
 	height: 500px;
 	margin: 5px 0;
 	padding: 25px;

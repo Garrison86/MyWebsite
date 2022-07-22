@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Canadian Beaches</title>
+
+    <!-- Google fonts used in this theme  -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,800,600,700,300' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap3_travelTheme/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="bootstrap3_travelTheme/theme.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]->
+   <script src="bootstrap3_travelTheme/assets/js/html5shiv.js"></script>
+   <script src="bootstrap3_travelTheme/assets/js/respond.min.js"></script>
+   <![endif]-->
+</head>
+
+<body>
+    <header style="height: 200px;">
+        <div class="navbar navbar-default">
+            <h1 style="text-align: center; font-size: 50px; color:beige">Beaches</h1>
+
+            <div class="container">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="travel.php">Home</a></li>
+                        <li><a href="Canada.php">Canada Home</a></li>
+                        <li><a href="WaterFalls.php">Water Falls</a></li>
+                        <li><a href="NationalParks.php">National Parks</a></li>
+                    </ul>
+                </div>
+            </div>
+    </header>
+    </div>
+    <div style="height: fit-content; margin: 20px;">
+        <div style="height: fit-content; margin: 20px;">
+            <h2 style="text-align: left;">Long Beach, Vancover</h2>
+            <p style="font-size: 20px">Long Beach is one of the most scenic beaches in Canada located in one of the country's most stunning natural environments, the Pacific Rim National Park. Long Beach is actually one beach of several that make up the Long Beach Unit. Many resorts and cottages line the shores, with the Wickaninnish Inn being the most famous and luxurious. Long Beach sits between the funky, laid-back town of Tofino and Ucluelet on British Columbia's Vancouver Island.
+            </p>
+            <img src="images\travel\medium\beach3.png" style="height: 400px;" title="Getty Images/Chris Cheadle - Long Beach, Vancover"></img>
+        </div>
+        <br>
+        <div style="height: fit-content; margin: 20px;">
+            <h2 style="text-align: left;">Tribune Bay, Hornby Island, British Columbia</h2>
+            <p style="font-size: 20px">You have to take two ferries to get to Hornby Island, but the effort is well worth it if you like a tranquil, laid-back island experience.</p>
+            <p style="font-size: 20px">Tribune Bay Provincial Park boasts a white sandy beach that stretches way out to sea at low tide. The sun-warmed waters reach near-tropical temperatures in summer. The bay's eroded hoodoo rock formations result in a unique and dramatic rocky shoreline.</p>
+            <p style="font-size: 20px">Around the southern point, at Little Tribune Bay, locals and visitors relax on Hornby's nude beach.</p>
+        </div>
+        <br>
+        <div style="height: fit-content; margin: 20px;">
+            <h2 style="text-align: left;">Wasaga Beach, Ontario </h2>
+            <p style="font-size: 20px">Fourteen kilometers 8.7 miles of white sandy beach draws throngs of people to Wasaga Beach every summer. The Wasaga Beach strip is reminiscent of Florida during March Break, with lots of trinket and clothing shops, scantily clad teens and twenty-somethings, but there are also plenty of quieter spots along the beach and cottage rentals are plentiful.
+            </p>
+        </div>
+        <br>
+        <div style="height: fit-content; margin: 20px;">
+            <h2 style="text-align: left;">Devonshire Beach, Alberta </h2>
+            <p style="font-size: 20px">Located within Lesser Slave Lake Provincial Park, Devonshire Beach is 7 km of white sandy beach amidst 1,500-year-old sand dunes, making it a popular spot for an annual sand castle building competition as well as swimming, surfing, and fishing. </p>
+            <p style="font-size: 20px">At the top of this page, you find lnks that will bring you to Beaches, Water Falls, and National Parks of Canada.</p>
+        </div>
+        <br>
+        <div style="height: fit-content; margin: 20px;">
+            <h2 style="text-align: left;">Sandbanks, Ontario </h2>
+            <p style="font-size: 20px">Sandbanks Provincial Park comprises three beaches with loads of dunes and sandbars that is a delight for kids. Camping is available but ​you should book way in advance. Sandbanks is located in Prince Edward County, a charming region of Ontario that has an abundance of organic farms, wineries and antique shops.</p>
+        </div>
+    </div>
+    <footer style="height: 200px;">
+        <div class="container">
+            <hr />
+
+        </div>
+        <section class="footer" style="	text-align: center; margin: 20px;">
+            <?php
+            const STUDENT_NUM = "040-606-873";
+            const EMAIL_MIKE = "garr0055@algonquinlive.com";
+
+            echo STUDENT_NUM;
+            echo "<br>";
+            echo EMAIL_MIKE;
+            echo "<br>";
+            ?>
+        </section>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap3_travelTheme/assets/js/jquery.js"></script>
+    <script src="bootstrap3_travelTheme/dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap3_travelTheme/assets/js/holder.js"></script>
+
+    <!-- ========================================================================
+
+Page REFERENCES: 
+    https://www.tripsavvy.com/best-beaches-in-canada-1481736
+    the infomation on this page was taken from this site and used as a demonstration. not for publication.
+
+picture:
+    https://s1.it.atcdn.net/wp-content/uploads/2016/09/Lake-Winnipeg-washes-up-on-the-peaceful-shores-of-Gimli-Manitoba-by-Max-Muench.jpg
+    https://www.readersdigest.ca/wp-content/uploads/2016/06/beach-reasons-swimming-1024x668.jpg
+
+============================================================================== -->
+</body>
+
+</html>

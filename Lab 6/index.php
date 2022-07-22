@@ -12,4 +12,3 @@ echo '<content class="row" style="font-family: Kdam Thmor Pro, sans-serif;">
     
 include 'Footer.php';
 ?>
-

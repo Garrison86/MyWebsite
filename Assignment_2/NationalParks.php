@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>National Parks</title>
+
+    <!-- Google fonts used in this theme  -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,800,600,700,300' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap3_travelTheme/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="bootstrap3_travelTheme/theme.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]->
+   <script src="bootstrap3_travelTheme/assets/js/html5shiv.js"></script>
+   <script src="bootstrap3_travelTheme/assets/js/respond.min.js"></script>
+   <![endif]-->
+</head>
+
+<body>
+    <header style="height: 200px;">
+        <div class="navbar navbar-default">
+            <h1 style="text-align: center; font-size: 50px; color:beige">National Parks</h1>
+
+            <div class="container">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="travel.php">Home</a></li>
+                        <li><a href="Canada.php">Canada Home</a></li>
+                        <li><a href="WaterFalls.php">Water Falls</a></li>
+                        <li><a href="Beaches.php">Beaches</a></li>
+                    </ul>
+                </div>
+            </div>
+    </header>
+    </div>
+    <div style="height: fit-content; margin: 20px;">
+        <div style="height: fit-content; margin: 20px;">
+            <h2 style="text-align: left;">Newfoundland and Labrador—Gros Morne National Park</h2>
+            <p style="font-size: 20px">If Jurassic Park ever actually came to be, you'd be hard-pressed to find a more appropriate setting than Gros Morne National Park.</p> 
+            <p style="font-size: 20px">It took 485 million years for the forces of nature to shape this park into a jaw-dropping wonder. Images can hardly do justice to the 
+            beautiful green river valleys sitting between massive, imposing cliff sides. These distinct mountains of flat rock are actually the exposed crust of the 
+            earth, and the site allowed geologists to prove tectonic plate theory. Gros Morne is a hiker's dream, full of marked and unmarked trails to be explored and enjoyed.
+            </p>
+            <img src="images\travel\medium\nationalpark1.png" style="height: 400px;" title="Long Beach, Vancover"></img>
+        </div>
+        <br>
+        <div style="height: fit-content; margin: 20px;">
+            <h2 style="text-align: left;">Prince Edward Island National Park</h2>
+            <p style="font-size: 20px">What's an island holiday without a little swimming? The 60-kilometre Prince Edward Island National Park captures the beautiful 
+            north shore of the province, including the many picturesque white and red-sand beaches. And you may need to take a dip after spending the day hiking, 
+            cycling, golfing, or geocaching. The park is also home to the Greenwich Interpretation Centre, which features 20 interactive and multimedia exhibits about 
+            the region, and the 10,000 years of history that shaped it.</p>
+
+        </div>
+        <br>
+        <div style="height: fit-content; margin: 20px;">
+            <h2 style="text-align: left;">Nova Scotia—Cape Breton Highlands National Park </h2>
+            <p style="font-size: 20px">Fourteen kilometers 8.7 miles of white sandy beach draws throngs of people to Wasaga Beach every summer. The Wasaga Beach strip is reminiscent of Florida during March Break, with lots of trinket and clothing shops, scantily clad teens and twenty-somethings, but there are also plenty of quieter spots along the beach and cottage rentals are plentiful.
+            </p>
+            <img src="images\travel\medium\park2.png" style="height: 400px;" title="Cape Breton Highlands National Park, Nova Scotia - Credit: Parks Canada"></img>
+        </div>
+        <br>
+        <div style="height: fit-content; margin: 20px;">
+            <h2 style="text-align: left;">New Brunswick—Fundy National Park </h2>
+            <p style="font-size: 20px">Fundy National Park is home to the highest tides in the world. Twice each day, 100 billion tonnes of seawater causes the 
+            tides to rise up 12 metres, a phenomenon that has left its mark on the coastline. Beyond enjoying the tides in a kayak or boat, the park is really an outdoor adventurer's 
+            paradise. Over 120 kilometres of walking and hiking trails will bring you through mountains, into valleys and forests, and past waterfalls. Rent a 
+            canoe, kayak, or just swim in beautiful Bennett Lake before setting up your tent for a night in the park.</p>
+        </div>
+        <br>
+        <div style="height: fit-content; margin: 20px;">
+            <h2 style="text-align: left;">Ontario—Rouge Urban Park </h2>
+            <p style="font-size: 20px">In the Greater Toronto Area, you'll find Canada's only national park based in a city: Rouge National Urban Park. The 
+            park's accessibility an hour from Toronto's core and a touch longer by public transit means you can easily leave Canada's largest metropolitan 
+            area without a car for a true outdoor gateway. Cyclists love the park's quiet, scenic roads and gentle rolling hills. Hikers find delight in its 
+            mature forests, views of the Rouge and Little Rouge River and the relaxing rural feel of its farm fields, which are among the last remaining 
+            working farms the area. For beach goers, the sandy Rouge Beach brushed by the warm waters of Lake Ontario is a must please note that there are 
+            no lifeguard on site.</div>
+    </div>
+    <footer style="height: 200px;">
+        <div class="container">
+            <hr />
+
+        </div>
+        <section class="footer" style="	text-align: center; margin: 20px;">
+            <?php
+            const STUDENT_NUM = "040-606-873";
+            const EMAIL_MIKE = "garr0055@algonquinlive.com";
+
+            echo STUDENT_NUM;
+            echo "<br>";
+            echo EMAIL_MIKE;
+            echo "<br>";
+            ?>
+        </section>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap3_travelTheme/assets/js/jquery.js"></script>
+    <script src="bootstrap3_travelTheme/dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap3_travelTheme/assets/js/holder.js"></script>
+
+    <!-- ========================================================================
+
+Page REFERENCES: 
+    https://travel.destinationcanada.com/things-to-do/canadian-national-parks
+    the infomation on this page was taken from this site and used as a demonstration. not for publication.
+
+picture:
+https://d28wuw2qq2j212.cloudfront.net/sites/default/files/styles/post_inline_image_desktop/public/posts/%5Bnid%5D/3_cape-breton-highlands-national-park-nova-scotia_credit_parks-canada.jpg?itok=opMNYKL8&timestamp=1620344932
+https://d28wuw2qq2j212.cloudfront.net/sites/default/files/styles/post_inline_image_desktop/public/posts/%5Bnid%5D/1_gros-morne-national-park-newfoundland-labrador_credit_newfoundland-and-labrador-tourism.jpg?itok=klFzlQIJ&timestamp=1620344932
+============================================================================== -->
+</body>
+
+</html>
