@@ -18,6 +18,10 @@ include "Header.php";
         $empEmail = $_POST["EmailTextBox"];
         else
             $empEmail = " ";
+    if (isset($_POST["position"])) //=======================Emp  Email
+        $position = $_POST["position"];
+        else
+            $position = " ";
     ?>
 
 <div class="row container-fluid">
@@ -33,16 +37,16 @@ include "Header.php";
 
             <input type="text" name="EmailTextBox" placeholder="Email Address?" style="margin:2px;"/>
             </div> 
-
+            
             <div class="col">
-                <input type="radio" name="manager" value="Manager" />
-                <label for="empNameTextBox, IDTextBox, TeleTextBox, EmailTextBox">Manager</label>
-                <input type="radio" name="teamLead" value="teamLead" />
-                <label for="empNameTextBox, IDTextBox, TeleTextBox, EmailTextBox">Team Lead</label>
-                <input type="radio" name="iTDeveloper" value="iTDeveloper" />
-                <label for="empNameTextBox, IDTextBox, TeleTextBox, EmailTextBox">IT Developer</label>
-                <input type="radio" name="iTAnalyst" value="iTAnalyst" />
-                <label for="empNameTextBox, IDTextBox, TeleTextBox, EmailTextBox">IT Analyst</label>
+                <input type="radio" name="position" value="Manager" />
+                <label for="empNameTextBox">Manager</label>
+                <input type="radio" name="position" value="teamLead" />
+                <label for="empNameTextBox">Team Lead</label>
+                <input type="radio" name="position" value="iTDeveloper" />
+                <label for="empNameTextBox">IT Developer</label>
+                <input type="radio" name="position" value="iTAnalyst" />
+                <label for="empNameTextBox">IT Analyst</label>
             </div>
             <br>
             <input type="submit" value="Submit Information" />
@@ -63,6 +67,8 @@ echo 'Employee Information<br>';
 		Employee Telephone: $empTele
         <br>
 		Emplyoee Email: $empEmail
+        <br>
+		Emplyoee position: $position
 _END;
         ?>
     </div>

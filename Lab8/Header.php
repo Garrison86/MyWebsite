@@ -20,7 +20,7 @@
           rel="stylesheet">
 </head>
 
-<body style="background-image: url(bg.jpg);">
+<body style="background-image: url(img2.png);">
     <div class="container">
     <header class="row" style="font-family: 'Fascinate', cursive;">
 
@@ -40,4 +40,3 @@
     </header>
     <content class="row" style="font-family: Kdam Thmor Pro, sans-serif;">
     <div class="content">
-<!-- Background image ataken from https://wallpaperaccess.com/full/85814.jpg ->
