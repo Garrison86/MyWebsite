@@ -27,14 +27,11 @@ else
 			catch(PDOException $e) {
 				  echo "Person Could not be added:  " . $e->getMessage();
 			}		
-			
 			$pdo = null;
-			}
-		
+			}	
 		catch(PDOException $e) {
 				  echo "Connection failed:  " . $e->getMessage();
-		}
-			
+		}			
 	}
 	else	
 		$error = "Please enter a first and last name.";	

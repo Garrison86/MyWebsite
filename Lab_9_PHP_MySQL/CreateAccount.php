@@ -1,7 +1,6 @@
 <?php
 include "Header.php";
 
-echo "Connected successfully";
 if (isset($_POST["submit"]))
 { 
     $_SESSION["empName"] = $_POST["empNameTextBox"];
@@ -9,9 +8,9 @@ if (isset($_POST["submit"]))
     $_SESSION["empTel"] = $_POST["TeleTextBox"];
     $_SESSION["empEmail"] = $_POST["EmailTextBox"];
     $_SESSION["newPos"] = $_POST["position"];
-
-header("Location: Session2.php");
-exit;
+    
+    header("Location: Session2.php");
+    exit;
 }
 ?>
 
@@ -19,29 +18,20 @@ exit;
     <div class="left-side col">
         <br>
         <form method="post" action="Session2.php">
-        <div class="col">
+            <div class="col">
                 <input type="text" name="firstNameTextBox" placeholder="First Name?" style="margin:2px;" />
+                <br>
                 <input type="text" name="LastNameTextBox" placeholder="Last Name?" style="margin:2px;" />
+                <br>
                 <input type="text" name="EmailTextBox" placeholder="Email Address?" style="margin:2px;" />
+                <br>
                 <input type="text" name="TeleTextBox" placeholder="Telephone Number?" style="margin:2px;" />
+                <br>
                 <input type="text" name="SinTextBox" placeholder="SIN" style="margin:2px;" />
+                <br>
                 <input type="text" id="passW" name="passWord" placeholder="Password" style="margin:2px;" />
-
-                
-
-            </div>
-            
-        <div class="col">
-            <input type="radio" name="position" value="Manager" />
-            <label for="empNameTextBox">Manager</label>
-            <input type="radio" name="position" value="teamLead" />
-            <label for="empNameTextBox">Team Lead</label>
-            <input type="radio" name="position" value="iTDeveloper" />
-            <label for="empNameTextBox">IT Developer</label>
-            <input type="radio" name="position" value="iTAnalyst" />
-            <label for="empNameTextBox">IT Analyst</label>
-            <br>
-            <input type="submit" value="Submit Information" />
+                <br><br>
+                <input type="submit" value="Submit Information" />
         </div>
     </form>
     </div>

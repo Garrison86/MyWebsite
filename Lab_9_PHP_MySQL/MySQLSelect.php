@@ -40,8 +40,8 @@ require "MySQLConnectionInfo.php";
 					echo "</form>";	
 					
 					echo "<form action=\"MySQLUpdate.php\" method=\"post\">";							
-						echo "<input type=\"hidden\" name=\"personId\" value=\"".$row[0]."\" />";
-						echo "<input type=\"hidden\" name=\"firstName\" value=\"".$row[1]."\" />";	
+						echo '<input type="hidden" name="personId" value="'.$row[0].'"/>';
+						echo '<input type="hidden" name="firstName" value="'.$row[1].'" />';	
 						echo "<input type=\"hidden\" name=\"lastName\" value=\"".$row[2]."\" />";	
 						echo "<input type=\"submit\" name=\"editButton\" value=\"Edit Person\" />";
 					echo "</form>";

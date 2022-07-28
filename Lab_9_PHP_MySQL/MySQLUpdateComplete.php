@@ -21,7 +21,6 @@ if(isset($_POST["updatepersonId"]))
 		catch(PDOException $e) {
 			echo "Person Could not be Updated:  " . $e->getMessage();
 		}	
-		
 		$pdo = null;		
 	}	
 	catch(PDOException $e) {
