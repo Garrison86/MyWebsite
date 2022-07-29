@@ -1,5 +1,5 @@
 <?php
-
+session_start(); 
 require "MySQLConnectionInfo.php";
 
 $error = "";
@@ -12,14 +12,14 @@ if(isset($_POST["updatepersonId"]))
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		echo "Connected successfully" . "</br>";
 		
-		$sqlQuery = "UPDATE person SET FirstName = '".$_POST["updatefirstName"]."', LastName = '".$_POST["updatelastName"]."' WHERE PersonId = '".$_POST['updatepersonId']."'";
+		$sqlQuery = "UPDATE Employee SET FirstName = '".$_POST["updatefirstName"]."', LastName = '".$_POST["updatelastName"]."' WHERE PersonId = '".$_POST['updatepersonId']."'";
 		
 		try {
 			$result = $pdo->query( $sqlQuery );
-			echo "Person Successfully Updated". "<br>";
+			echo "Employee Successfully Updated". "<br>";
 			}
 		catch(PDOException $e) {
-			echo "Person Could not be Updated:  " . $e->getMessage();
+			echo "Employee Could not be Updated:  " . $e->getMessage();
 		}	
 		$pdo = null;		
 	}	
@@ -28,18 +28,14 @@ if(isset($_POST["updatepersonId"]))
 	}	
 	
 }
-
+include "Header.php";
 ?>
 
-<html>
-	<head>
 		<title>MySQL Insert</title>
-	</head>
-	<body>
-		<?php 
-			include "MySQLMenu.php";
 
-			echo $error;
-		?>
-	</body>
-</html>
+<?php 
+		include "MySQLMenu.php";
+
+		echo $error;
+include "Footer.php";
+?>

@@ -1,31 +1,22 @@
-<?php
 
-require "MySQLConnectionInfo.php";
-
-?>
-
-<html>
-	<head>
-		<title>MySQL Select</title>
-	</head>
-	<body>
 		<?php 
+			include "Header.php";		
 			include "MySQLMenu.php";
-						
+			require "MySQLConnectionInfo.php";			
 			try {
-			  $pdo = new PDO("mysql:host=$host; dbname=$database", $username, $password);
+			  $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
 			  // set the PDO error mode to exception
 			  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			  echo "Connected successfully" . "</br>";
 			  
-			  $sqlQuery = "SELECT * FROM person";		
+			  $sqlQuery = "SELECT * FROM `Employee`";		
 				
 			  $result = $pdo->query( $sqlQuery );
 			
 			  $rowCount = $result->rowCount();
 			
 			if($rowCount == 0)
-				echo "*** There are no rows to display from the Person table ***";
+				echo "*** There are no rows to display from the Employee table ***";
 			else
 			{
 				for($i=0; $i<$rowCount; ++$i)
@@ -61,7 +52,5 @@ require "MySQLConnectionInfo.php";
 			} catch(PDOException $e) {
 			  echo "Connection failed: " . $e->getMessage();
 			}				
-			
-		?>		
-	</body>
-</html>
+include "Footer.php";			
+?>

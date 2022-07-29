@@ -1,3 +1,4 @@
 <?php
-	echo "<a href=\"MySQLInsert.php\">INSERT Page</a> | <a href=\"MySQLSelect.php\">SELECT Page</a><br /><br />";
-?>
+	echo '<a href="MySQLInsert.php" class="btn btn-primary" style="margin: 5px">INSERT Page</a>';
+	echo '<a href="MySQLSelect.php" class="btn btn-primary" style="margin: 5px">SELECT Page</a>';
+?> 

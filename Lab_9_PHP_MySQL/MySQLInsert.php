@@ -1,65 +1,40 @@
 <?php
-
+session_start(); 
 require "MySQLConnectionInfo.php";
 
 $error = "";
 
-if(!isset($_POST["firstName"]) || !isset($_POST["lastName"]))
+if(isset($_POST["empFirstName"]) || isset($_POST["empLastName"]))
 {
-	$error = "Please enter a first and last name.";
-}
-else
-{
-	if($_POST["firstName"] != "" && $_POST["lastName"] != "")
-	{		
+		
 		try {
 			$pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
 			  // set the PDO error mode to exception
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			 echo "Connected successfully" . "</br>";				
 				
-			$sqlQuery = "INSERT INTO person (FirstName, LastName) VALUES('".$_POST["firstName"]."', '".$_POST["lastName"]."')";
+			$sqlQuery = "INSERT INTO Employee (FirstName, LastName, EmailAddress, TelephoneNumber, SocialInsuranceNumber, Password) VALUES('"
+			.$_POST["empFirstName"]."', '"
+			.$_POST["empLastName"]."','"
+			.$_POST["empEmail"]."','"
+			.$_POST["empTele"]."','"
+			.$_POST["empSIN"]."','"
+			.$_POST["empPass"]."')";
 			
 			try {
 				$result = $pdo->query( $sqlQuery );
-				echo "Person Successfully Added". "<br>";
+				echo "Employee Successfully Added". "<br>";
 			}
 			catch(PDOException $e) {
-				  echo "Person Could not be added:  " . $e->getMessage();
+				  echo "Employee Could not be added:  " . $e->getMessage();
 			}		
 			$pdo = null;
 			}	
 		catch(PDOException $e) {
 				  echo "Connection failed:  " . $e->getMessage();
 		}			
-	}
-	else	
-		$error = "Please enter a first and last name.";	
 }
-
+include "Header.php";
+include "MySQLMenu.php";
+include "Footer.php";
 ?>
-
-<html>
-	<head>
-		<title>MySQL Insert</title>
-	</head>
-	<body>
-		<?php 
-			include "MySQLMenu.php";
-		?>			
-		<form action="MySQLInsert.php" method="post">
-			First Name: <input type="text" name="firstName" />
-			<br />
-			Last Name: <input type="text" name="lastName" />
-			<br />
-			<br />
-			<input type="submit" value="Submit to Database" />
-		</form>
-		<br />
-		<br />
-		<?php 
-			echo $error;
-		?>		
-	</body>
-</html>
-

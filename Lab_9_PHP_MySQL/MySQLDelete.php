@@ -1,12 +1,13 @@
-<?php
+<?php session_start(); 
+
 
 require "MySQLConnectionInfo.php";
 
 $error = "";
 
-if(!isset($_POST['personId']))
+if(!isset($_POST['EmployeeId']))
 {
-	$error = "Person could not be deleted.";
+	$error = "Employee could not be deleted.";
 }
 else
 {
@@ -16,14 +17,14 @@ else
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		echo "Connected successfully" . "</br>";
 		
-		$sqlQuery = "DELETE FROM person WHERE PersonId = ".$_POST['personId'];
+		$sqlQuery = "DELETE FROM Employee WHERE EmployeeId = ".$_POST['EmployeeId'];
 		
 		try {
 			$result = $pdo->query( $sqlQuery );
-			echo "Person Successfully Deleted". "<br>";
+			echo "Employee Successfully Deleted". "<br>";
 			}
 		catch(PDOException $e) {
-			echo "Person Could not be deleted:  " . $e->getMessage();
+			echo "Employee Could not be deleted:  " . $e->getMessage();
 		}	
 		
 		$pdo = null;		
@@ -33,18 +34,10 @@ else
 	}	
 
 }
+include "Header.php";
+include "MySQLMenu.php";
 
+	echo $error;
+
+include "Footer.php";	
 ?>
-
-<html>
-	<head>
-		<title>MySQL Insert</title>
-	</head>
-	<body>
-		<?php 
-			include "MySQLMenu.php";
-
-			echo $error;
-		?>
-	</body>
-</html>

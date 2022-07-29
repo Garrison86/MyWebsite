@@ -1,23 +1,26 @@
-<?php
-include "Header.php";
+<?php session_start(); 
 
 if (isset($_POST["submit"]))
 { 
-    $_SESSION["empName"] = $_POST["empNameTextBox"];
-    $_SESSION["empId"] = $_POST["IDTextBox"];
-    $_SESSION["empTel"] = $_POST["TeleTextBox"];
+    $_SESSION["empFirstName"] = $_POST["firstNameTextBox"];
+    $_SESSION["empLastName"] = $_POST["LastNameTextBox"];
     $_SESSION["empEmail"] = $_POST["EmailTextBox"];
-    $_SESSION["newPos"] = $_POST["position"];
+    $_SESSION["empTele"] = $_POST["TeleTextBox"];
+    $_SESSION["empSIN"] = $_POST["SinTextBox"];
+    $_SESSION["empPass"] = $_POST["passWord"];
+   
     
-    header("Location: Session2.php");
+    header("Location: MySQLInsert.php");
     exit;
 }
+include "Header.php";
 ?>
 
-<div class="row container-fluid">
-    <div class="left-side col">
+<div class="row container-fluid" style="text-align: center">
+    <div class="left-side" style="height: 400px; ">
         <br>
-        <form method="post" action="Session2.php">
+        <h3>Create your new Account</h3>
+        <form method="post" action="CreateAccount.php">
             <div class="col">
                 <input type="text" name="firstNameTextBox" placeholder="First Name?" style="margin:2px;" />
                 <br>
@@ -29,7 +32,7 @@ if (isset($_POST["submit"]))
                 <br>
                 <input type="text" name="SinTextBox" placeholder="SIN" style="margin:2px;" />
                 <br>
-                <input type="text" id="passW" name="passWord" placeholder="Password" style="margin:2px;" />
+                <input type="text" name="passWord" placeholder="Password" style="margin:2px;" />
                 <br><br>
                 <input type="submit" value="Submit Information" />
         </div>
