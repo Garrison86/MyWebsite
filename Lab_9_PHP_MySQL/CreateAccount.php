@@ -8,7 +8,6 @@ if (isset($_POST["submit"]))
     $_SESSION["empTele"] = $_POST["TeleTextBox"];
     $_SESSION["empSIN"] = $_POST["SinTextBox"];
     $_SESSION["empPass"] = $_POST["passWord"];
-   
     
     header("Location: MySQLInsert.php");
     exit;

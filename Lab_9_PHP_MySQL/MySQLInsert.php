@@ -8,12 +8,13 @@ if(isset($_POST["empFirstName"]) || isset($_POST["empLastName"]))
 {
 		
 		try {
-			$pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-			  // set the PDO error mode to exception
-			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			 echo "Connected successfully" . "</br>";				
+			// $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+			// $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			//  echo "Connected successfully" . "</br>";	
+			$mysqli = new mysqli($host, $username, $password, $database);
+			echo "Connected successfully" . "</br>";
 				
-			$sqlQuery = "INSERT INTO Employee (FirstName, LastName, EmailAddress, TelephoneNumber, SocialInsuranceNumber, Password) VALUES('"
+			$sqlQuery = "INSERT INTO Employee (FirstName, LastName, EmailAddress, PhoneNumber, SocialInsuranceNumber, PASSWORD) VALUES('"
 			.$_POST["empFirstName"]."', '"
 			.$_POST["empLastName"]."','"
 			.$_POST["empEmail"]."','"

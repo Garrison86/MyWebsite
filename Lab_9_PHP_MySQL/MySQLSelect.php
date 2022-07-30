@@ -26,14 +26,14 @@
 					echo "<table><tr><td>";										
 					echo "<br />";					
 					echo "<form action=\"MySQLDelete.php\" method=\"post\">";		
-						echo "<input type=\"hidden\" name=\"personId\" value=\"".$row[0]."\" />";
+						echo "<input type=\"hidden\" name=\"EmployeeId\" value=\"".$row[0]."\" />";
 						echo "<input type=\"submit\" name=\"deleteButton\" value=\"Delete Person\" />";
 					echo "</form>";	
 					
 					echo "<form action=\"MySQLUpdate.php\" method=\"post\">";							
-						echo '<input type="hidden" name="personId" value="'.$row[0].'"/>';
-						echo '<input type="hidden" name="firstName" value="'.$row[1].'" />';	
-						echo "<input type=\"hidden\" name=\"lastName\" value=\"".$row[2]."\" />";	
+						echo '<input type="hidden" name="EmployeeId" value="'.$row[0].'"/>';
+						echo '<input type="hidden" name="FirstName" value="'.$row[1].'" />';	
+						echo "<input type=\"hidden\" name=\"LastName\" value=\"".$row[2]."\" />";	
 						echo "<input type=\"submit\" name=\"editButton\" value=\"Edit Person\" />";
 					echo "</form>";
 					echo "</td>";

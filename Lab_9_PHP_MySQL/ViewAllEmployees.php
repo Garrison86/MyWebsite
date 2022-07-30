@@ -4,11 +4,10 @@ session_start();
 require "MySQLConnectionInfo.php";
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+    // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    // $mysqli = new mysqli($host, $username, $password, $database);
-    // $mysqli = new mysqli($host, $username, $password, $database);
+    $mysqli = new mysqli($host, $username, $password, $database);
     echo "Connected successfully" . "</br>";
 
     $sqlQuery = "SELECT * FROM Employee";	// CONNECTION
