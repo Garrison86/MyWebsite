@@ -14,8 +14,9 @@ try {
     $result = $mysqli->query($sqlQuery); 
     $outputInArrayFormat = $result->fetch_all(MYSQLI_ASSOC);
     print_r($outputInArrayFormat);
-    
-				
+    foreach ($outputInArrayFormat as $employee ){
+		echo $employee['firstName'];		
+    }
     }
     catch (PDOException $e) {
     
@@ -29,11 +30,12 @@ include "Header.php";
     <h3>Session State Data</h3>
 
     </div>
-
+    <?php foreach ($outputInArrayFormat as $employee ):?>
     <div class="row" style="background-color:white; height: 250px; margin: 5px;">
     <h3>Database Data</h3>
-
+    <h2><?php echo $employee['empFirstName'];?></h2>
     </div>
+        <?php endforeach; ?>
 </div>
 <?php
 include "Footer.php";
