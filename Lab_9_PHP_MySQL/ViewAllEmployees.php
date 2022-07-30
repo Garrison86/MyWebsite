@@ -4,14 +4,14 @@ session_start();
 require "MySQLConnectionInfo.php";
 
 try {
-    // $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-    // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    $mysqli = new mysqli($host, $username, $password, $database);
+    // $mysqli = new mysqli($host, $username, $password, $database);
     // $mysqli = new mysqli($host, $username, $password, $database);
     echo "Connected successfully" . "</br>";
 
-    $sqlQuery = "SELECT * FROM employee";	// CONNECTION
+    $sqlQuery = "SELECT * FROM Employee";	// CONNECTION
     $result = $mysqli->query($sqlQuery); 
     $outputInArrayFormat = $result->fetch_all(MYSQLI_ASSOC);
     //print_r($outputInArrayFormat);
@@ -34,39 +34,39 @@ include "Header.php";
     <div class="row" style="background-color:white; height: 250px; height:fit-content; margin: 5px;">
         <h3>Database Data</h3>
         <div class="col">
-        <h4>First Name</h4>
+        <h5>First Name</h5>
             <?php foreach ($outputInArrayFormat as $employee ):?>
-            <h4><?php echo $employee['FirstName'].'<br>';?></h4>
+            <h6><?php echo $employee['FirstName'].'<br>';?></h6>
             <?php endforeach; ?>
         </div>
         <div class="col">
-        <h4>Last Name</h4>
+        <h5>Last Name</h5>
             <?php foreach ($outputInArrayFormat as $employee ):?>
-            <h4><?php echo $employee['LastName'].'<br>';?></h4>
+            <h6><?php echo $employee['LastName'].'<br>';?></h6>
             <?php endforeach; ?>
         </div>
         <div class="col">
-            <h4>Email Address</h4>
+            <h5>Email Address</h4>
             <?php foreach ($outputInArrayFormat as $employee ):?>
-            <h4><?php echo $employee['EmailAddress'].'<br>';?></h4>
+            <h6><?php echo $employee['EmailAddress'].'<br>';?></h6>
             <?php endforeach; ?>
         </div>
         <div class="col">
-        <h4>Phone Number</h4>
+        <h5>Phone Number</h5>
             <?php foreach ($outputInArrayFormat as $employee ):?>
-            <h4><?php echo $employee['FirstName'].' '.$employee['LastName'].''.'<br>';?></h4>
+            <h6><?php echo $employee['PhoneNumber'].'<br>';?></h6>
             <?php endforeach; ?>
         </div>
         <div class="col">
-        <h4>SIN</h4>
+        <h5>SIN</h5>
             <?php foreach ($outputInArrayFormat as $employee ):?>
-            <h4><?php echo $employee['FirstName'].' '.$employee['LastName'].''.'<br>';?></h4>
+            <h6><?php echo $employee['SocialInsuranceNumber'].'<br>';?></h6>
             <?php endforeach; ?>
         </div>
         <div class="col">
-        <h4>Password</h4>
+        <h5>Password</h5>
             <?php foreach ($outputInArrayFormat as $employee ):?>
-            <h4><?php echo $employee['PASSWORD'].'<br>';?></h4>
+            <h6><?php echo $employee['PASSWORD'].'<br>';?></h6>
             <?php endforeach; ?>
         </div>
     </div>
