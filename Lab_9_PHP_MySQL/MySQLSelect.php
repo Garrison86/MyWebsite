@@ -9,7 +9,7 @@
 			  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			  echo "Connected successfully" . "</br>";
 			  
-			  $sqlQuery = "SELECT * FROM `Employee`";		
+			  $sqlQuery = "SELECT * FROM Employee";		
 				
 			  $result = $pdo->query( $sqlQuery );
 			

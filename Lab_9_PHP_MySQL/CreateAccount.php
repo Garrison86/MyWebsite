@@ -1,6 +1,15 @@
-<?php session_start(); 
+<?php 
+session_start(); 
+include "Header.php";
 
-if (isset($_POST["submit"]))
+//========================================================================================= Submit
+if (isset($_POST["submit"])
+&& isset($_POST["firstNameTextBox"]) 
+&& isset($_POST["LastNameTextBox"]) 
+&& isset($_POST["empEmailTextBox"]) 
+&& isset($_POST["TeleTextBox"]) 
+&& isset($_POST["SinTextBox"]) 
+&& isset($_POST["passWord"])) // if statment for all feilds
 { 
     $_SESSION["empFirstName"] = $_POST["firstNameTextBox"];
     $_SESSION["empLastName"] = $_POST["LastNameTextBox"];
@@ -9,17 +18,22 @@ if (isset($_POST["submit"]))
     $_SESSION["empSIN"] = $_POST["SinTextBox"];
     $_SESSION["empPass"] = $_POST["passWord"];
     
+    // header("Location: MySQLInsert.php");
     header("Location: MySQLInsert.php");
     exit;
-}
-include "Header.php";
+} 
+// else {
+//     echo 'empty fields left...';
+// }
 ?>
 
 <div class="row container-fluid" style="text-align: center">
     <div class="left-side" style="height: 400px; ">
         <br>
         <h3>Create your new Account</h3>
-        <form method="post" action="CreateAccount.php">
+
+        <?php // Form to be used in filling out email and password, if matches should bring user to ViewAllEmployees.php?>
+        <form method="post" action="MySQLInsert.php">
             <div class="col">
                 <input type="text" name="firstNameTextBox" placeholder="First Name?" style="margin:2px;" />
                 <br>
@@ -34,8 +48,10 @@ include "Header.php";
                 <input type="text" name="passWord" placeholder="Password" style="margin:2px;" />
                 <br><br>
                 <input type="submit" value="Submit Information" />
-        </div>
-    </form>
+            </div>
+        </form>
+
+
     </div>
 </div>
 

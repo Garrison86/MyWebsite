@@ -7,13 +7,16 @@ $error = "";
 if(isset($_POST["updatepersonId"]))
 {
 	try {
-		// $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-		// $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$mysqli = new mysqli($host, $username, $password, $database);
     	echo "Connected successfully" . "</br>";
 
-		$sqlQuery = "UPDATE Employee SET FirstName = '".$_POST["updatefirstName"]."', LastName = '".$_POST["updatelastName"]."' WHERE EmployeeId = '".$_POST['updateemployeeId']."'";
+		$sqlQuery = "UPDATE Employee SET FirstName = '".
+		$_POST["updatefirstName"]."', LastName = '".
+		$_POST["updatelastName"]."' WHERE EmployeeId = '".
+		$_POST['updateemployeeId']."'";
 		
 		try {
 			$result = $mysqli->query($sqlQuery); 
