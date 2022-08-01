@@ -3,8 +3,7 @@ session_start();
 include "Header.php";
 
 //========================================================================================= Submit
-if (isset($_POST["submit"])
-&& isset($_POST["firstNameTextBox"]) 
+if (isset($_POST["firstNameTextBox"]) 
 && isset($_POST["LastNameTextBox"]) 
 && isset($_POST["empEmailTextBox"]) 
 && isset($_POST["TeleTextBox"]) 

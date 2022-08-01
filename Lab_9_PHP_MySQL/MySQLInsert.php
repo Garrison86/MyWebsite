@@ -10,7 +10,7 @@ $error = "";
 		$mysqli = new mysqli($host, $username, $password, $database);
 		echo "Connected successfully" . "</br>";
 			
-		$sqlQuery = "INSERT INTO 'Employee' (EmployeeId, FirstName, LastName, EmailAddress, PhoneNumber, SocialInsuranceNumber, PASSWORD) VALUES('"
+		$sqlQuery = "INSERT INTO employee (EmployeeId, FirstName, LastName, EmailAddress, PhoneNumber, SocialInsuranceNumber, PASSWORD) VALUES('"
 		.$_SESSION["empFirstName"]."','"
 		.$_SESSION["empLastName"]."','"
 		.$_SESSION["empEmail"]."','"
