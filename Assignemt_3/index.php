@@ -19,7 +19,7 @@ include "Header.php";
             </header> -->
             <div id="content" class="clearfix">
                 <aside>
-                        <h2>Today's Specials</h2>
+                        <h2><?php echo date("l"); ?> Specials</h2>
                         <hr>
                         <img src="images/burger_small.jpg" alt="Burger" title="Monday's Special - Burger">
                         <h3>The WP Burger</h3>

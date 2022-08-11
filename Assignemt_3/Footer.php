@@ -4,7 +4,7 @@
 <Footer class="row">
     <section class="footer">
 
-        <p>&copy; 2022 CST8238. All Rights Reserved.</p>
+        <p>&copy; <?php echo date("Y"); ?> CST8238. All Rights Reserved.</p>
 
     </section>
 </Footer>
