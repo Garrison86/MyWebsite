@@ -1,5 +1,4 @@
-<?php include 'header.php';?>
-
+<?php include 'Header.php';?>
 
             <div id="content" class="clearfix">
                 <p>&nbsp;</p>
@@ -11,5 +10,4 @@
 				<p>Donec ornare risus at nulla iaculis, ut ornare urna mollis. Proin mi purus, molestie et sodales et, fringilla ut velit. Quisque in sapien vulputate, fermentum eros ac, vulputate orci. Proin blandit sollicitudin nibh, ullamcorper euismod massa consequat quis. Mauris pellentesque volutpat ante at ullamcorper. Fusce eu augue accumsan, consectetur est sed, ornare nibh. In scelerisque ex a commodo tempus. Maecenas tincidunt quis mi eu pellentesque. Maecenas hendrerit efficitur turpis, vel ornare nibh condimentum sed. Mauris aliquet nulla vitae lacinia faucibus. Proin sodales mollis quam ac mattis. Integer porta neque ipsum, eu dignissim tortor pulvinar vel. Nunc venenatis mauris ante, eu ornare odio feugiat eget. Cras quis leo facilisis, condimentum diam nec, facilisis tellus. Maecenas facilisis lacus condimentum felis pulvinar, vitae maximus lacus consequat.</p>
             </div><!-- End Content -->
 
-
-<?php include 'footer.php';?>
+<?php include 'Footer.php';?>

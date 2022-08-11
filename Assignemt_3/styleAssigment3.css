@@ -1,0 +1,95 @@
+body {
+	text-align: center;
+	
+}
+.container{
+	margin:auto;
+}
+.right-side{
+	background-color: rgb(161, 184, 229);
+	height: fit-content;
+	height: 500px;
+	margin: 5px;
+}
+.left-side{
+	font-family: 'Abel', sans-serif;
+	background-color: rgb(161, 184, 229);
+	height: fit-content;
+	height: 500px;
+	margin: 5px;
+}
+
+header {
+	font-family: 'Abel', sans-serif;
+	/* background-image: url("food.jpg"); */
+	background-size:70% ;
+	font-family: 'Fascinate';
+}
+
+.content {
+	background-color: rgb(240,170,98);
+	border: 10px outset;
+	height: 500px;
+	margin:auto;
+	padding: 25px;
+	height: fit-content;
+}
+
+.menu {
+	padding: 5px;
+	text-align: center;
+}
+
+.footer {
+	background-color: rgb(43, 45, 45);
+	color: rgb(121, 121, 121);
+	height: 80px;
+	margin: 5px auto;
+	padding: 10px;
+	text-align: center;
+}
+/* Dropdown Button */
+.dropbtn {
+	background-color: #232323;
+	color: white;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(172, 172, 172, 0.2);
+	z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropbtn {background-color: #7a7d7a;}
+
+  
+  /* Table in Employee.php */
+  table {
+	width: 100%;
+	border-collapse: collapse;
+  }
+  
+  
+  th {text-align: left;}

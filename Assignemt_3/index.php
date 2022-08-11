@@ -1,28 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>WP Eatery - Home</title>
+<?php 
+include "Header.php"; 
+
+?>
+
+        <title>WP Eatery</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div id="wrapper">
-            <header class="clearfix">
-                <img src="images/header_img.jpg" alt="Dining Room" title="WP Eatery"/>
-                <div id="title">
+            <!-- <header class="clearfix">
+                <img src="images/header_img.jpg" alt="Dining Room" title="WP Eatery" style=" height:100%; width: 100%;">
+                <div id="title" style="font-family: fanatsy;">
                     <h1>WP Eatery</h1>
                     <h2>1385 Woodroffe Ave, Ottawa ON</h2>
                     <h2>Tel: (613)727-4723</h2>
                 </div>
-            </header>
-            <nav>
-                <div id="menuItems">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>                        
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
+            </header> -->
             <div id="content" class="clearfix">
                 <aside>
                         <h2>Today's Specials</h2>
@@ -44,28 +38,20 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                     <h3>Upcoming Events ...</h3>
                     <p>
-                    <strong class="event">St. Patty's Day Party</strong><br/>
-                    <strong>Date:</strong> Tuesday Oct 17, 2017<br/>
-                    <strong>Time:</strong> 7pm<br/>
-                    <strong>Price:</strong> $35.00<br/>
-                    Join us for an authentic Irish four course meal, complete with shepard's pie and one green beer!
+                    <?php 
+
+                    include "class_lib.php";
+                    foreach($eventsArray as $event){
+                        echo "$event <br>";
+                    }; 
+                    ?>
                     </p>
-                    <p>
-                    <strong class="event">Samy's Spring Fling!</strong><br/>
-                    <strong>Date:</strong> Saturday Oct 18, 2017<br/>
-                    <strong>Time:</strong> 8pm<br/>
-                    <strong>Price:</strong> $40.00<br/>
-                    Join us for to kick off the beginning of spring! This event will include 4 of Samy's infamous appetizers and one cocktail!
-                    </p>
+
                     <h2>Book your Private Party!</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                 </div><!-- End Main -->
             </div><!-- End Content -->
-            <footer>
-                <p>&copy; 2022 CST8238. All Rights Reserved.</p>
-            </footer>
         </div><!-- End Wrapper -->
-    </body>
-</html>
+<?php include "Footer.php";?>
