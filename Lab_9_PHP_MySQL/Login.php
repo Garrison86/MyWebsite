@@ -5,13 +5,13 @@ include "Header.php";
 //========================================================================================= Submit
     // if (isset($_POST["submit"]))
     if (isset($_POST["empEmailTextBox"]) && isset($_POST["passTextBox"]))
+
     {
         $_SESSION["empEmail"] = $_POST["empEmailTextBox"];
         $_SESSION["empPass"] = $_POST["passTextBox"];
         header("Location: ViewAllEmployees.php");
         exit;
     }
-
 //========================================================================================= Form below
 ?>
 

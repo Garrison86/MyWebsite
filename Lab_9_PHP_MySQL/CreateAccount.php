@@ -17,8 +17,8 @@ if (isset($_POST["firstNameTextBox"])
     $_SESSION["empSIN"] = $_POST["SinTextBox"];
     $_SESSION["empPass"] = $_POST["passWord"];
     
-    // header("Location: MySQLInsert.php");
     header("Location: MySQLInsert.php");
+    // header("Location: ViewAllEMployees.php");
     exit;
 } 
 ?>
@@ -29,7 +29,7 @@ if (isset($_POST["firstNameTextBox"])
         <h3>Create your new Account</h3>
 
         <?php // Form to be used in filling out email and password, if matches should bring user to ViewAllEmployees.php?>
-        <form method="post" action="MySQLInsert.php">
+        <form method="post" action="ViewAllEMployees.php">
             <div class="col">
                 <input type="text" name="firstNameTextBox" placeholder="First Name?" style="margin:2px;" />
                 <br>

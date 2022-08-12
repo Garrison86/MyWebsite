@@ -5,7 +5,7 @@
                 <a href="index.php" class="nav-link" style="margin: 5px">Home</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link" style="margin: 5px">Book</a>
+                <a href="mailing_list.php" class="nav-link" style="margin: 5px">Mailing List</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link" style="margin: 5px">Menu</a>

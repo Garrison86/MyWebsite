@@ -2,23 +2,23 @@
 
 include "Header.php";
 
-    if (isset($_POST["empNameTextBox"])) //=======================Emp Name
+    if (isset($_POST["empNameTextBox"]))    //=======================Emp Name
         $empName = $_POST["empNameTextBox"];
         else
             $empName = " ";
-    if (isset($_POST["IDTextBox"])) //=======================Emp ID
+    if (isset($_POST["IDTextBox"]))         //=======================Emp ID
         $empId = $_POST["IDTextBox"];
         else
             $empId = " ";
-    if (isset($_POST["TeleTextBox"])) //=======================Emp  Telephone
+    if (isset($_POST["TeleTextBox"]))       //=======================Emp  Telephone
         $empTele = $_POST["TeleTextBox"];
         else
             $empTele = " ";
-    if (isset($_POST["EmailTextBox"])) //=======================Emp  Email
+    if (isset($_POST["EmailTextBox"]))      //=======================Emp  Email
         $empEmail = $_POST["EmailTextBox"];
         else
             $empEmail = " ";
-    if (isset($_POST["position"])) //=======================Emp  Email
+    if (isset($_POST["position"]))          //=======================Emp  Email
         $position = $_POST["position"];
         else
             $position = " ";

@@ -23,7 +23,7 @@ $q = intval($_GET['q']);
 
 $con = mysqli_connect($host, $username, $password, $database);
 if (!$con) {
-  die('Could not connect: ');
+  die('Could not connect: '.mysqli_error($con));
 }
 
 mysqli_select_db($con,"dbuoykhmo6i7yu");
