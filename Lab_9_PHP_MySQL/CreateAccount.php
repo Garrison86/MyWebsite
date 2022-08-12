@@ -21,9 +21,6 @@ if (isset($_POST["firstNameTextBox"])
     header("Location: MySQLInsert.php");
     exit;
 } 
-// else {
-//     echo 'empty fields left...';
-// }
 ?>
 
 <div class="row container-fluid" style="text-align: center">

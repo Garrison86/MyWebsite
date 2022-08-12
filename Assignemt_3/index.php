@@ -9,14 +9,6 @@ include "Header.php";
     </head>
     <body>
         <div id="wrapper">
-            <!-- <header class="clearfix">
-                <img src="images/header_img.jpg" alt="Dining Room" title="WP Eatery" style=" height:100%; width: 100%;">
-                <div id="title" style="font-family: fanatsy;">
-                    <h1>WP Eatery</h1>
-                    <h2>1385 Woodroffe Ave, Ottawa ON</h2>
-                    <h2>Tel: (613)727-4723</h2>
-                </div>
-            </header> -->
             <div id="content" class="clearfix">
                 <aside>
                         <h2><?php echo date("l"); ?> Specials</h2>

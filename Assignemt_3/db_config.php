@@ -8,7 +8,9 @@
 // and Username as generated automatically by the system of the web hosting domain.
 $servername = "localhost";
 $username = "ujrfgcl0tsqbq";
-$password = "1234Eatery";
+$password = "12345Eatery";
 $dbname = "dbsbzgigqz1kqd";
 
+
+$cfg['Console']['Mode'] = 'collapse';
 ?>

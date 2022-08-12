@@ -20,9 +20,9 @@ body {
 }
 
 header {
-	font-family: 'Abel', sans-serif;
-	/* background-image: url("food.jpg"); */
-	background-size:70% ;
+	font-family:'Abel', sans-serif;
+	background-image: url("food.jpg");
+	background-size: 100%;
 	font-family: 'Fascinate';
 }
 
