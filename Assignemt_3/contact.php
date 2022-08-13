@@ -1,33 +1,26 @@
 <?php
-require "db_config.php";
+    
+//========================================================================
 
-try {
     $mysqli = new mysqli($servername, $username, $password, $dbname);
-    
+    include "WebsiteUser";
     include "Header.php"; ?>
-    <?php
-        // $submittingForm = $_POST['reset'];
-    // if ($submittingForm) {
-        if (
-            isset($_POST["customerfName"]) && isset($_POST["customerlName"])
-            && isset($_POST["phoneNumber"]) && isset($_POST["emailAddress"])
-            && isset($_POST["referral"]) && isset($_POST["username"])
-        ) {
+<?php
+//================================================================================
+    if (isset($_POST["customerfName"]) && isset($_POST["customerlName"])
+        && isset($_POST["phoneNumber"]) && isset($_POST["emailAddress"])
+        && isset($_POST["referral"]) && isset($_POST["username"])) 
+        {
+            $WebsiteUser = new WebsiteUser();
+
+            $WebsiteUser->insertuser($_POST["customerfName"],$_POST["customerlName"],$_POST["phoneNumber"],$_POST["emailAddress"],$_POST["userName"],$_POST["referral"]);
     
-            $sql = "INSERT INTO  `mailinglist` (`firstName`, `lastName`, `phoneNumber`, `emailAddress`, `username`, `referrer`) 
-                                VALUES ('" . $_POST["customerfName"] . "',
-                                '" . $_POST["customerlName"] . "',
-                                '" . $_POST["phoneNumber"] . "',
-                                '" . $_POST["emailAddress"] . "',
-                                '" . $_POST["userName"] . "',
-                                '" . $_POST["referral"] . "')";
-    
-            $_SESSION["firstName"] = $_POST["customerfName"];
-            $_SESSION["lastName"] = $_POST["customerlName"];
-            $_SESSION["phoneNumber"] = $_POST["phoneNumber"];
-            $_SESSION["emailAddress"] = $_POST["emailAddress"];
-            $_SESSION["username"] = $_POST["userName"];
-            $_SESSION["referrer"] = $_POST["referral"];
+            // $_SESSION["firstName"] = $_POST["customerfName"];
+            // $_SESSION["lastName"] = $_POST["customerlName"];
+            // $_SESSION["phoneNumber"] = $_POST["phoneNumber"];
+            // $_SESSION["emailAddress"] = $_POST["emailAddress"];
+            // $_SESSION["username"] = $_POST["userName"];
+            // $_SESSION["referrer"] = $_POST["referral"];
             header("Location: MailingList.php");
             exit;
         } else {
@@ -46,7 +39,7 @@ try {
                 echo "User name was not entered<br>";
             echo "</div>";
         }
-    // }
+
     ?>
     <div id="wrapper">
         <div id="content" class="clearfix">
@@ -74,7 +67,7 @@ try {
                     and promotions from the WP eatery!</p>
 
 
-                <form name="frmNewsletter" id="frmNewsletter" method="post">
+                <form name="frmNewsletter" id="frmNewsletter" method="post" action="contact.php">
                     <table>
                         <tr>
                             <td>First Name:</td>
@@ -123,9 +116,7 @@ try {
         </div><!-- End Content -->
     </div>
 <?php
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
+
 include "Footer.php";
 
 // action="newsletterSignup.php"

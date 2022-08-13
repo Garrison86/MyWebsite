@@ -4,11 +4,11 @@ class WebsiteUser{
     /* Host address for the database */
     protected static $DB_HOST = "127.0.0.1";
     /* Database username */
-    protected static $DB_USERNAME = "cst8238";
+    protected static $DB_USERNAME = "ugntm1olmpap0";
     /* Database password */
-    protected static $DB_PASSWORD = "password";
+    protected static $DB_PASSWORD = "";
     /* Name of database */
-    protected static $DB_DATABASE = "cst8238";
+    protected static $DB_DATABASE = "dbuoykhmo6i7yu";
     
     private $username;
     private $password;
@@ -46,6 +46,17 @@ class WebsiteUser{
     }
     public function getUsername(){
         return $this->username;
+    }
+    function insertuser($first, $last, $number, $email, $username, $referral){
+
+        $sql = "INSERT INTO  `mailinglist` (`firstName`, `lastName`, `phoneNumber`, `emailAddress`, `username`, `referrer`) 
+                VALUES ('" . $first . "',
+                '" . $last . "',
+                '" . $number . "',
+                '" . $email . "',
+                '" . $username. "',
+                '" . $referral . "')";
+        $this->mysqli->query($sql);
     }
 }
 ?>

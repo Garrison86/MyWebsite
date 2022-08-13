@@ -8,23 +8,25 @@ try {
 
     $mysqli = new mysqli($servername, $username, $password, $dbname);
 
-    if($mysqli -> connect_errno) {
-        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+    if ($mysqli->connect_errno) {
+        echo "Failed to connect to MySQL: " . $mysqli->connect_error;
         exit();
-      }
+    }
 
-    $sql = "SELECT * FROM mailingList";	
-    $result = $mysqli -> query($sql);
+    $sql = "SELECT * FROM mailingList";
+    $result = $mysqli->query($sql);
     $rowCount = $result->num_rows;
     // fetch all
     // free results set
     // $result -> free_result();
-    // $mysqli -> close();
-    if($rowCount == 0)
+    if ($rowCount == 0)
     echo "*** There are no rows to display from the Employee table ***";
-    else
-    { 
-    $outputInArrayFormat = $result -> fetch_all(MYSQLI_ASSOC);
+    else {
+        $outputInArrayFormat = $result->fetch_all(MYSQLI_ASSOC);
+    }
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
 echo '<div class="col" style="background: white">';
 ?>
 
@@ -49,27 +51,10 @@ echo '<div class="col" style="background: white">';
             <h6><?php echo $employee['phoneNumber'].'<br>';?></h6>
             <?php endforeach; ?>
         </div>
-        <!-- <div class="col">
-        <h5>User Name</h5>
-            <?php foreach ($outputInArrayFormat as $employee ):?>
-            <h6><?php echo $employee['username'].'<br>';?></h6>
-            <?php endforeach; ?>
-        </div>
-        <div class="col">
-        <h5>Referal Type</h5>
-            <?php foreach ($outputInArrayFormat as $employee ):?>
-            <h6><?php echo $employee['referrer'].'<br>';?></h6>
-            <?php endforeach; ?>
-        </div> -->
     </div>
 </div>
             
  <?php
-    }   
- }
- catch (PDOException $e) {
-     echo "Connection failed: " . $e->getMessage();
- }
 include "Footer.php";
 
 ?>

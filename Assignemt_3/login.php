@@ -19,6 +19,7 @@
                     $username = $_POST['username'];
                     $password = $_POST['password'];
                     $websiteUser->authenticate($username, $password);
+                    
                     if($websiteUser->isAuthenticated()){
                         $_SESSION['websiteUser'] = $websiteUser;
                         header('Location:restricted.php');
