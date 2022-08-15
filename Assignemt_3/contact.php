@@ -1,47 +1,40 @@
 <?php
-    
-//========================================================================
+    session_start();
+    require "WebSiteUser.php";
+    include "Header.php";
 
-    $mysqli = new mysqli($servername, $username, $password, $dbname);
-    include "WebsiteUser";
-    include "Header.php"; ?>
-<?php
-//================================================================================
-    if (isset($_POST["customerfName"]) && isset($_POST["customerlName"])
+    $messSpace = "";
+    if( isset($_POST["customerfName"]) && isset($_POST["customerlName"])
         && isset($_POST["phoneNumber"]) && isset($_POST["emailAddress"])
-        && isset($_POST["referral"]) && isset($_POST["username"])) 
-        {
+        && isset($_POST["username"])&& $_POST["referral"]  != "refer") {
+
+            if($_POST["customerfName"] != ""  && $_POST["customerlName"] != ""
+            && $_POST["phoneNumber"] != "" && $_POST["emailAddress"] != ""
+           && $_POST["username"] != "" && $_POST["referral"] != ""){
+            
             $WebsiteUser = new WebsiteUser();
+            $messSpace = $WebsiteUser->insertuser(
+                $_POST["customerfName"],
+                $_POST["customerlName"],
+                $_POST["phoneNumber"],
+                $_POST["emailAddress"],
+                $_POST["userName"],
+                $_POST["referral"]);
+                
+                
+                echo $messSpace;
+            }
+            else
+            echo "Blank fields detected";
+         } 
+            else 
+            echo "Enter all feilds";
+        
 
-            $WebsiteUser->insertuser($_POST["customerfName"],$_POST["customerlName"],$_POST["phoneNumber"],$_POST["emailAddress"],$_POST["userName"],$_POST["referral"]);
     
-            // $_SESSION["firstName"] = $_POST["customerfName"];
-            // $_SESSION["lastName"] = $_POST["customerlName"];
-            // $_SESSION["phoneNumber"] = $_POST["phoneNumber"];
-            // $_SESSION["emailAddress"] = $_POST["emailAddress"];
-            // $_SESSION["username"] = $_POST["userName"];
-            // $_SESSION["referrer"] = $_POST["referral"];
-            header("Location: MailingList.php");
-            exit;
-        } else {
-            echo '<div class="col" style="background: white; margin: 10px; padding: 5px">';
-            if (isset($_POST["customerfName"]) == NULL)
-                echo "First name was not entered <br>";
-            if (isset($_POST["customerlName"]) == NULL)
-                echo "Last Name was not entered<br>";
-            if (isset($_POST["phoneNumber"]) == NULL)
-                echo "Phone number was not entered<br>";
-            if (isset($_POST["emailAddress"]) == NULL)
-                echo "Email address was not entered<br>";
-            if (isset($_POST["referral"]) == NULL)
-                echo "Please select a referal type<br>";
-            if (!isset($_POST["username"]) == NULL)
-                echo "User name was not entered<br>";
-            echo "</div>";
-        }
-
-    ?>
-    <div id="wrapper">
+    
+echo <<< _END
+        <div id="wrapper">
         <div id="content" class="clearfix">
 
             <div class="col" style="background-color:moccasin; 
@@ -67,7 +60,7 @@
                     and promotions from the WP eatery!</p>
 
 
-                <form name="frmNewsletter" id="frmNewsletter" method="post" action="contact.php">
+                <form action="contact.php" id="frmNewsletter" method="post" >
                     <table>
                         <tr>
                             <td>First Name:</td>
@@ -88,13 +81,12 @@
                         <tr>
                             <td>Username:</td>
                             <td><input type="text" name="userName" id="username" size='20'>
+
                         </tr>
                         <tr>
-
                             <td>How did you hear<br> about us?</td>
-                            <td>
-                                <select type="radio" name="referral" size="1">
-                                    <option>Select referer</option>
+                            <td><select type="radio" name="referral" size="1">
+                                    <option value="refer">Select referer</option>
                                     <option value="newspaper">Newspaper</option>
                                     <option value="radio">Radio</option>
                                     <option value="tv">Television</option>
@@ -106,8 +98,8 @@
                         </tr>
                         <tr>
                             <td colspan='2'>
-                                <input type='submit' name='btnSubmit' id='btnSubmit' value='Sign up!'>&nbsp;&nbsp;
-                                <input type='reset' name="btnReset" id="btnReset" value="Reset Form">
+                                <input type='submit' name='btnSubmit' value='Sign up!'>&nbsp;&nbsp;
+                                <input type='reset' name='btnReset'  value='Reset Form'>
                             </td>
                         </tr>
                     </table>
@@ -115,9 +107,7 @@
             </div><!-- End Main -->
         </div><!-- End Content -->
     </div>
-<?php
+_END;
 
-include "Footer.php";
-
-// action="newsletterSignup.php"
-?>
+    include "Footer.php";
+?> 

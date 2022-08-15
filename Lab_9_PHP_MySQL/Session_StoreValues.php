@@ -38,7 +38,7 @@ if(isset($_SESSION["empName"])){
             <p style="margin: 2px">E-mail: $eMail</P>
             <p style="margin: 2px">Position: $posit</P>
             </div>
-        </div>';
+        </div>;
 _END;
 
 include "Footer.php";

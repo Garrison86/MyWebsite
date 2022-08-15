@@ -1,13 +1,5 @@
 <?php
 
-
-  // $_SESSION["empName"] = $_POST["empNameTextBox"];
-  // $_SESSION["empId"] = $_POST["IDTextBox"];
-  // $_SESSION["empTel"] = $_POST["TeleTextBox"];
-  // $_SESSION["empEmail"] = $_POST["EmailTextBox"];
-  // $_SESSION["newPos"] = $_POST["position"];
-
-
 class EventItem {
  
 // Properties
@@ -67,17 +59,16 @@ class EventItem {
     <strong>Event Details: </strong>{$this->eventDesc}<br/> 
     </p>";
     }
-
 }
 
-//==================================== Event objects created ============
+//============= Event objects created ============
 $event1 = new EventItem("St. Patty's Day Party", "Tuesday Oct 17, 2017", "7pm","Join us for an authentic Irish four course meal, complete with shepard's pie and one green beer!" ,"$35.00");
 $event2 = new EventItem("Samy's Spring Fling!", "Saturday Oct 18, 2017", "8pm","Join us for to kick off the beginning of spring! This event will include 4 of Samy's infamous appetizers and one cocktail!" ,"$40.00");
 $event3 = new EventItem("St. Patty's Day Party", "Tuesday Oct 17, 2017", "7pm","Description Here " ,"$35.00");
 $event4 = new EventItem("St. Patty's Day Party", "Tuesday Oct 17, 2017", "7pm","Description Here " ,"$35.00");
 
 
-//===================== Array to Hold events ============================
+//=============== Array to Hold events ===================
 $displayEvent1 = $event1->displayEvent();
 $displayEvent2 = $event2->displayEvent();
 
