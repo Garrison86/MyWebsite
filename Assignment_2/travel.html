@@ -27,18 +27,18 @@
 
 <body>
 
-<?php include 'travel-header.php';?>
+<?php include 'Assignment_2/travel-header.php';?>
    
    <div class="container">  <!-- start main content container -->
    <div class="row">  <!-- start main content row -->
    <div class="col-md-3">  <!-- start left navigation rail column -->
-   <?php include 'travel-left-rail.php'; ?>
+   <?php include 'Assignment_2/travel-left-rail.php'; ?>
 </div>  <!-- end left navigation rail --> 
 
 <div class="col-md-9">  <!-- start main content column -->
 <ol class="breadcrumb">
    <li><a href="Assignment_2/travel.html">Home</a></li>
-           <li><a href="UnderConstruction.html">Browse</a></li>
+           <li><a href="Assignment_2/UnderConstruction.html">Browse</a></li>
            <li class="active">Favorites</li>
          </ol>          
          
@@ -48,15 +48,15 @@
          <div class="well">
             <div class="row">
                <?php 
-               include 'travel-data.php';
+               include 'Assignment_2/travel-data.php';
 
                echo '<div class =“col-md-3”>';
 
                foreach ($images as $key){ 
-                     echo '<a href="travel-image.php?id='.$key['id'].'";>';
+                     echo '<a href="Assignment_2/travel-image.html?id='.$key['id'].'";>';
                      echo '<img  
                      id="'.$key['id'].'"; 
-                     src="images/travel/square/'.$key['path'].'";
+                     src="Assignment_2/images/travel/square/'.$key['path'].'";
                      title="'.$key['title'].'"; 
                      description="'.$key['description'].'"; 
                      country="'.$key['country'].'"; 
@@ -73,7 +73,7 @@
    </div>  <!-- end main content row -->
 </div>   <!-- end main content container -->
    
-<?php include 'travel-footer.php'; ?>   
+<?php include 'Assignment_2/travel-footer.html'; ?>   
 
    
    
