@@ -15,9 +15,9 @@
    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,800,600,700,300' rel='stylesheet' type='text/css'>  
 
    <!-- Bootstrap core CSS -->
-   <link href="Assignment_2/bootstrap3_travelTheme/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="bootstrap3_travelTheme/dist/css/bootstrap.min.css" rel="stylesheet">
    <!-- Custom styles for this template -->
-   <link href="Assignment_2/bootstrap3_travelTheme/theme.css" rel="stylesheet">  
+   <link href="bootstrap3_travelTheme/theme.css" rel="stylesheet">  
 
    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -29,8 +29,8 @@
 <body>
 
 <?php 
-include 'Assignment_2/travel-header.html';  
-include 'Assignment_2/travel-data.php';
+include 'travel-header.html';  
+include 'travel-data.php';
 ?>
    
 <div class="container">  <!-- start main content container -->
@@ -40,8 +40,8 @@ include 'Assignment_2/travel-data.php';
       </div>  <!-- end left navigation rail --> 
       <div class="col-md-9">  <!-- start main content column -->
          <ol class="breadcrumb">
-           <li><a href="Assignment_2/UnderConstruction.html">Home</a></li>
-           <li><a href="Assignment_2/travel.html">Favorites</a></li>
+           <li><a href="UnderConstruction.html">Home</a></li>
+           <li><a href="travel.html">Favorites</a></li>
            <li class="active"><?php $images[$_GET['id']]['title'] ?></li>
          </ol> 
 
@@ -51,7 +51,7 @@ include 'Assignment_2/travel-data.php';
             <div class="col-md-8">
                <?php 
 
-            echo '<img src="Assignment_2/images/travel/medium/'.$images[$_GET['id']]['path'].'" class="img-responsive center-block" title="'.$images[$_GET['id']]['title'].'">';
+            echo '<img src="images/travel/medium/'.$images[$_GET['id']]['path'].'" class="img-responsive center-block" title="'.$images[$_GET['id']]['title'].'">';
                ?>
                
             </div>
@@ -69,13 +69,13 @@ include 'Assignment_2/travel-data.php';
    </div>  <!-- end main content row -->
 </div>   <!-- end main content container -->
    
-<?php include 'Assignment_2/travel-footer.html'; ?>   
+<?php include 'travel-footer.html'; ?>   
    
  <!-- Bootstrap core JavaScript
  ================================================== -->
  <!-- Placed at the end of the document so the pages load faster -->
- <script src="Assignment_2/bootstrap3_travelTheme/assets/js/jquery.js"></script>
- <script src="Assignment_2/bootstrap3_travelTheme/dist/js/bootstrap.min.js"></script>
- <script src="Assignment_2/bootstrap3_travelTheme/assets/js/holder.js"></script>
+ <script src="bootstrap3_travelTheme/assets/js/jquery.js"></script>
+ <script src="bootstrap3_travelTheme/dist/js/bootstrap.min.js"></script>
+ <script src="bootstrap3_travelTheme/assets/js/holder.js"></script>
 </body>
 </html>
