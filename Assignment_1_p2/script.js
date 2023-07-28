@@ -1,7 +1,7 @@
 
 var myJsOutput = document.getElementById("myJsOutput");
-var fibOutput = document.getElementById("fibOutput"); // not used 
-var hollOutput = document.getElementById("hollOutput"); // not used 
+//var fibOutput = document.getElementById("fibOutput"); // not used 
+//var hollOutput = document.getElementById("hollOutput"); // not used 
 
 /** Button Function - (problem with having all options available at once)**/
 document.getElementById("myButton").onclick = function(){
@@ -17,8 +17,8 @@ document.getElementById("myButton").onclick = function(){
 
 /** Fibonacci Function **/
 document.getElementById("myFibButton").onclick = function(){
-    //myJsOutput.innerHTML = "<br>";
-    fibOutput.innerHTML = "<br>";
+    myJsOutput.innerHTML = "<br>";
+    //fibOutput.innerHTML = "<br>";
     fibSeq = document.getElementById("myFibonacci").value;
     var n1=0,n2=1,n3,i;  // Variables for the for loop
     for (i=0;i<fibSeq;i++){  
@@ -53,6 +53,6 @@ document.getElementById("myHollowBtn").onclick = function(){
         }
       string += "<br>";
     }
-    //myJsOutput.innerHTML = ("<pre>"+ string +"</pre>");
-    hollOutput.innerHTML = ("<pre>"+ string +"</pre>");
+    myJsOutput.innerHTML = ("<pre>"+ string +"</pre>");
+    //hollOutput.innerHTML = ("<pre>"+ string +"</pre>");
 }
