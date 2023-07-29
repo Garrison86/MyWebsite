@@ -46,5 +46,5 @@ document.getElementById("myHollowBtn").onclick = function(){
         }
       string += "<br>";
     }
-    hollOutput.innerHTML = ("<pre>"+ string +"</pre>");
+    myJsOutput.innerHTML = ("<pre>"+ string +"</pre>");
 }
