@@ -1,7 +1,7 @@
 
 var myJsOutput = document.getElementById("myJsOutput");
-var fibOutput = document.getElementById("fibOutput"); 
-var hollOutput = document.getElementById("hollOutput"); 
+// var fibOutput = document.getElementById("fibOutput"); 
+// var hollOutput = document.getElementById("hollOutput"); 
 
 document.getElementById("myButton").onclick = function(){
     myJsOutput.innerHTML = "<br>";
@@ -20,7 +20,7 @@ document.getElementById("myFibButton").onclick = function(){
     var n1=0,n2=1,n3,i;  
     for (i=0;i<fibSeq;i++){  
      n3=n1+n2;  
-     fibOutput.innerHTML += " "+ n1 +" + "+n2+" = "+n3 +"<br>";  
+     myJsOutput.innerHTML += " "+ n1 +" + "+n2+" = "+n3 +"<br>";  
      n1=n2;  
      n2=n3;  
     } 
