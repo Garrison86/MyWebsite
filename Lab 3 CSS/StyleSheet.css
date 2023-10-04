@@ -8,12 +8,12 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     background-image: url("RCMP_Logo_2022.jpg");
-    background-attachment: fixed;
+    background-attachment: scroll;
     font-size: 20px;
     color: yellowgreen;
     line-height: 1.6em;
     /*em is just a unit of mesurment*/
-    width: 100%;
+    width: auto;
     margin: auto;
     line-height: 1.6em;
 }
